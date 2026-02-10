@@ -1,0 +1,40 @@
+.circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+#sun {
+  background-color: #FFF57B;
+}
+
+#moon {
+  background-color:#E2E8F0
+}
+
+#day {
+  background-color: #89CFF0;
+}
+
+#night {
+  background-color: #0F172A;
+}
+
+.cloud {
+  display: none;
+}
+
+.clouds:hover .cloud{
+  display: block;
+  
+}
+
+.clouds{
+  position: relative;
+  transition: transform 3s;
+}
+
+.clouds:hover {
+  transform: scale(1.3);
+ 
+}
