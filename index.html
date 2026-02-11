@@ -8,38 +8,68 @@
 </head>
 <body id="day">
   <main>
-    <h1 id="day-title">Day</h1>
+    <h1 id="day-title">Day ☀️</h1>
+    <p>Click the clouds to learn more about me ☁️</p>
     <div id="sun" class="circle"></div>
     <div class="clouds">
-      <button class="cloud open-modal-btn" id="todo1"></button>
-      <button class="cloud open-modal-btn" id="todo2"></button>
-      <button class="cloud open-modal-btn" id="todo3"></button>
+      <div class="cloud">
+        <button class="cloud-shape open-modal-btn" id="introduction"></button>
+        <p>Introduction</p>
+      </div>
+      
+      <div class="cloud">
+        <button class="cloud-shape open-modal-btn" id="randomFacts"></button>
+        <p>Random Facts</p>
+      </div>
+      
+      <div class="cloud">
+        <button class="cloud-shape open-modal-btn" id="coursesTaken"></button>
+        <p>Courses Taken</p>
+      </div>
 
-      <div class="modal" id="modal-todo4">
+      <div class="modal" id="modal-introduction">
         <div class="modal-content">
-          <h2>TO DO 1</h2>
-          <p>TO DO</p>
+          <h2>Introduction</h2>
+          <p>
+            Hi! My name is Shin Ao but you can just call me Shin. I'm turning 21 this year and currently in my second year of comp sci.<br>
+          </p>
+          <p>
+            I was born in Singapore but moved to Sydney when I was four, so I spent most of my life here.<br>
+          </p>
+          <p>
+            I am keen to join  DevSoc's Trainee Program because I want to gain more experience in project work and meet new friends :&rpar;<br>
+          </p>
           <button class="close-modal-btn">Close</button> 
         </div>
       </div>
 
-      <div class="modal" id="modal-todo2">
+      <div class="modal" id="modal-randomFacts">
         <div class="modal-content">
-          <h2>TO DO 2</h2>
-          <p>TO DO</p>
+          <h2>Random Facts About Me</h2>
+          <ul>
+            <li>I have two siblings &lpar;one older brother and one younger sister&rpar;</li>
+            <li>My MBTI is INFP</li>
+            <li>I hate bitter melon</li>
+          </ul>
+          <img src="" alt="">
           <button class="close-modal-btn">Close</button> 
         </div>
       </div>
 
-      <div class="modal" id="modal-todo3">
+      <div class="modal" id="modal-coursesTaken">
         <div class="modal-content">
-          <h2>TO DO 3</h2>
-          <p>TO DO</p>
+          <h2>Courses taken</h2>
+          <ul>
+            <li>Term 1: COMP1511 MATH1081 MATH1131<br></li>
+            <li>Term 2: COMP1521 COMP2521 MATH1231<br></li>
+            <li>Term 3: COMP1531 COMP3331 MATH3411<br></li>
+          </ul>
           <button class="close-modal-btn">Close</button> 
         </div>
       </div>
+
     </div>
-    <a href="night.html"><button class="toggle day">Switch to Night</button></a>
+    <a href="night.html"><button class="toggle day">Switch to Night 🌙</button></a>
   </main>
 
   <script src="script.js"></script>
