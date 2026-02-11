@@ -88,6 +88,7 @@ button:active {
   transform: translate(-50%, -50%);
   transition: all 0.3s ease-in-out;
   text-align: center;
+  pointer-events: none;
 }
 
 .star p {
