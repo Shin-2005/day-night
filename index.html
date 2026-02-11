@@ -5,30 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shin's Day and Night Profile - Day Time</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
 </head>
 <body id="day">
   <main>
-  <h1 id="day-title">Day</h1>
-  <div id="sun" class="circle"></div>
-  <div class="clouds">
-    <svg width="100" height="100" viewBox="0 0 105 105" fill="white">
-      <path d="M 25,60 a 20,20 1 0,0 0,40 h 50 a 20,20 1 0,0 0,-40 a 10,10 1 0,0 -15,-10 a 15,15 1 0,0 -35,10 z"/>
-    </svg>
-    <svg width="100" height="100" viewBox="0 0 105 105" fill="white">
-      <path d="M 25,60 a 20,20 1 0,0 0,40 h 50 a 20,20 1 0,0 0,-40 a 10,10 1 0,0 -15,-10 a 15,15 1 0,0 -35,10 z"/>
-    </svg>
-    <svg width="100" height="100" viewBox="0 0 105 105" fill="white">
-      <path d="M 25,60 a 20,20 1 0,0 0,40 h 50 a 20,20 1 0,0 0,-40 a 10,10 1 0,0 -15,-10 a 15,15 1 0,0 -35,10 z"/>
-    </svg>
+    <h1 id="day-title">Day</h1>
+    <div id="sun" class="circle"></div>
+    <div class="clouds">
+      <button class="cloud open-modal-btn" id="todo1"></button>
+      <button class="cloud open-modal-btn" id="todo2"></button>
+      <button class="cloud open-modal-btn" id="todo3"></button>
 
-    <section class="cloud">
-      <h2>Hi I am Shin</h2>
-    </section>
-  </div>
-  <a href="night.html"><button class="toggle day">Swtich to Night</button></a>
+      <div class="modal" id="modal-todo4">
+        <div class="modal-content">
+          <h2>TO DO 1</h2>
+          <p>TO DO</p>
+          <button class="close-modal-btn">Close</button> 
+        </div>
+      </div>
 
-  
-</main>
+      <div class="modal" id="modal-todo2">
+        <div class="modal-content">
+          <h2>TO DO 2</h2>
+          <p>TO DO</p>
+          <button class="close-modal-btn">Close</button> 
+        </div>
+      </div>
+
+      <div class="modal" id="modal-todo3">
+        <div class="modal-content">
+          <h2>TO DO 3</h2>
+          <p>TO DO</p>
+          <button class="close-modal-btn">Close</button> 
+        </div>
+      </div>
+    </div>
+    <a href="night.html"><button class="toggle day">Switch to Night</button></a>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
