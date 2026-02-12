@@ -3,37 +3,18 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   min-height: 100vh;
+  margin: 0;
+  display: flex;          
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  font-family: "Poppins", sans-serif;
 }
 
-h1 {
-  font-size: 2.5rem;
-  top: 62%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: fixed;
-}
-
-.description {
-  top: 67%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: fixed;
-}
-
-button {
-  border-radius: 20px;
-  border: 0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  color: #000;
-  cursor: pointer;
-  padding: 10px 25px;
-  margin: 10px auto 0;
-}
-
-button:active {
-  opacity: 0.8;
+#night-section {
+  display: none;
 }
 
 #day {
@@ -56,25 +37,66 @@ button:active {
   color: #fff
 }
 
+h1 {
+  font-size: 2.5rem;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+#sun-moon-description {
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+#star-cloud-description {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+button {
+  border-radius: 20px;
+  border: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  color: #000;
+  cursor: pointer;
+  padding: 10px 25px;
+  margin: 10px auto 0;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
 .circle {
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  position: fixed;
+}
+
+#sun:hover {
+  transform: scale(1.1);
+  pointer-events: pointer;
+}
+
+#moon:hover {
+  transform: scale(1.1);
+  pointer-events: pointer;
 }
 
 #sun {
   background-color: #FFF57B;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
 }
 
 #moon {
-  background-color:#E2E8F0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-color: #E2E8F0;
+  transition: all 0.3s ease-in-out;
 }
 
 .cloud-shape {
@@ -100,6 +122,11 @@ button:active {
 .cloud, .star {
   display: inline-block;
   position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.cloud:hover, .star:hover {
+  transform: scale(1.1);
 }
 
 .cloud p, .star p {
@@ -159,7 +186,8 @@ button:active {
   padding: 15px 30px;
   width: 500px;
 
-  display: relative;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -193,34 +221,60 @@ button:active {
   position: absolute;
   top: 70%;
   left: 15%; 
+  animation: float 8s ease-in-out infinite;
 }
 
 .cloud:nth-child(2) {
   position: absolute;
   top: 25%;
   left: 70%; 
+  animation: float 7s ease-in-out infinite;
 }
 
 .cloud:nth-child(3) {
   position: absolute;
   top: 40%;
   left: 30%; 
+  animation: float 6s ease-in-out infinite;
 }
 
 .star:nth-child(1) { 
   position: absolute;
-  top: 70%;
-  left: 15%; 
+  top: 75%;
+  left: 30%; 
+  animation: glimmer 5s infinite alternate;
 }
 
 .star:nth-child(2) {
   position: absolute;
-  top: 25%;
+  top: 40%;
   left: 70%; 
+  animation: glimmer 5s infinite alternate;
 }
 
 .star:nth-child(3) {
   position: absolute;
-  top: 40%;
-  left: 30%; 
+  top: 15%;
+  left: 15%; 
+  animation: glimmer 5s infinite alternate;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-20px); 
+  }
+}
+
+@keyframes glimmer {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 5px #F8CA00);
+  }
+  50% {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 2px #F8CA00);
+  }
 }

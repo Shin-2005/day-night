@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shin's Day and Night Profile - Day Time</title>
+  <title>Shin's Day and Night Profile</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body id="day">
   <main>
-    <h1 id="day-title">Day ☀️</h1>
-    <p class="description">Click the clouds to learn more about me ☁️</p>
-    <div id="sun" class="circle"></div>
+    <section id="day-section">
+      <h1 id="day-title">Day</h1>
+    <p id="sun-moon-description">
+      Click the sun to switch to night 🌙
+    </p>
+    <p id="star-cloud-description">
+      Click the clouds to learn more about me ☁️
+    </p>
+    <button id="sun" class="circle"></button>
     <div class="clouds">
       <div class="cloud">
         <button class="cloud-shape open-modal-btn" id="introduction"></button>
@@ -37,7 +43,7 @@
             I was born in Singapore but moved to Sydney when I was four, so I spent most of my life here.<br>
           </p>
           <p>
-            I am keen to join  DevSoc's Trainee Program because I want to gain more experience in project work and meet new friends :&rpar;<br>
+            I am keen to join DevSoc's Training Program because I'm keen to gain more experience in project work and meet new friends :&rpar;<br>
           </p>
           <button class="close-modal-btn">Close</button> 
         </div>
@@ -67,9 +73,66 @@
           <button class="close-modal-btn">Close</button> 
         </div>
       </div>
+      </div>
+    </section>
 
-    </div>
-    <a href="night.html"><button class="toggle day">Switch to Night 🌙</button></a>
+    <section id="night-section">
+      <h1>Night</h1>
+      <p id="star-cloud-description">
+        Click the stars to learn more about me ⭐️
+      </p>
+      <p id="sun-moon-description">
+        Click the moon to switch to day ☀️
+      </p>
+
+      <button class="circle" id="moon"></button>
+
+      <div class="stars">
+        <div class="star">
+          <button class="star-shape open-modal-btn" id="badminton"></button>
+          <p>Badminton</p>
+        </div>
+        <div class="star">
+          <button class="star-shape open-modal-btn" id="anime"></button>
+          <p>Anime</p>
+        </div>
+        <div class="star">
+          <button class="star-shape open-modal-btn" id="videoGames"></button>
+          <p>Video Games</p>
+        </div>
+
+        <div class="modal" id="modal-badminton">
+          <div class="modal-content">
+            <h2>Badminton</h2>
+            <p>I've been playing Badminton since 2019, I usually play at my local club every Saturday.<br></p>
+            <p>My favourite player currently is Lee Zii Jia, mainly because of his signature backhand smash with a full pirouette.</p>
+            <button class="close-modal-btn">Close</button> 
+          </div>
+        </div>
+
+        <div class="modal" id="modal-anime">
+          <div class="modal-content">
+            <h2>Anime</h2>
+            <p>My Top Three Anime:<br></p>
+            <ol>
+              <li>Chainsaw Man</li>
+              <li>Spy x Family</li>
+              <li>Hell's Paradise</li>
+            </ol>
+          <p>I have been recommended Frieren and Apothecary Diaries, but I haven't started them yet.</p>
+            <button class="close-modal-btn">Close</button> 
+          </div>
+        </div>
+
+        <div class="modal" id="modal-videoGames">
+          <div class="modal-content">
+            <h2>Video Games</h2>
+            <p>I used to spend a lot of time playing league as a jungle main (hecarim, warwick, nunu). Nowadays, I prefer playing TFT.</p>
+            <button class="close-modal-btn">Close</button> 
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <script src="script.js"></script>
