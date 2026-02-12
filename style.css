@@ -1,3 +1,4 @@
+/* Global Style */
 * {
   box-sizing: border-box;
 }
@@ -10,13 +11,40 @@ body {
   flex-direction: column; 
   justify-content: center;
   align-items: center; 
-  font-family: "Poppins", sans-serif;
 }
 
-#night-section {
-  display: none;
+button {
+  border-radius: 20px;
+  border: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  color: #000;
+  cursor: pointer;
+  padding: 10px 27px;
 }
 
+button:active {
+  opacity: 0.8;
+}
+
+.circle {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  margin-left: 29px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 30px 0 10px;
+  text-align: center;
+}
+
+#sun-moon-description, #star-cloud-description {
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Backgrounds and Colors */
 #day {
   background: linear-gradient(
     to bottom,
@@ -37,58 +65,11 @@ body {
   color: #fff
 }
 
-h1 {
-  font-size: 2.5rem;
-  top: 62%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: fixed;
+#night-section {
+  display: none;
 }
 
-#sun-moon-description {
-  top: 67%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: fixed;
-}
-
-#star-cloud-description {
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: fixed;
-}
-
-button {
-  border-radius: 20px;
-  border: 0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  color: #000;
-  cursor: pointer;
-  padding: 10px 25px;
-  margin: 10px auto 0;
-}
-
-button:active {
-  opacity: 0.8;
-}
-
-.circle {
-  height: 250px;
-  width: 250px;
-  border-radius: 50%;
-}
-
-#sun:hover {
-  transform: scale(1.1);
-  pointer-events: pointer;
-}
-
-#moon:hover {
-  transform: scale(1.1);
-  pointer-events: pointer;
-}
-
+/* Shapes (Sun, Moon, Clouds, Stars) */
 #sun {
   background-color: #FFF57B;
   transition: all 0.3s ease-in-out;
@@ -125,8 +106,8 @@ button:active {
   transition: all 0.3s ease-in-out;
 }
 
-.cloud:hover, .star:hover {
-  transform: scale(1.1);
+.cloud:hover, .star:hover, .circle:hover {
+  scale: 1.1;
 }
 
 .cloud p, .star p {
@@ -151,13 +132,49 @@ button:active {
   visibility: visible;
 }
 
-.toggle {
-  position: fixed;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.cloud:nth-child(1) { 
+  position: absolute;
+  top: 70%;
+  left: 15%; 
+  animation: float 8s ease-in-out infinite;
 }
 
+.cloud:nth-child(2) {
+  position: absolute;
+  top: 25%;
+  left: 70%; 
+  animation: float 7s ease-in-out infinite;
+}
+
+.cloud:nth-child(3) {
+  position: absolute;
+  top: 40%;
+  left: 30%; 
+  animation: float 6s ease-in-out infinite;
+}
+
+.star:nth-child(1) { 
+  position: absolute;
+  top: 75%;
+  left: 30%; 
+  animation: glimmer 5s infinite alternate;
+}
+
+.star:nth-child(2) {
+  position: absolute;
+  top: 40%;
+  left: 70%; 
+  animation: glimmer 5s infinite alternate;
+}
+
+.star:nth-child(3) {
+  position: absolute;
+  top: 15%;
+  left: 15%; 
+  animation: glimmer 5s infinite alternate;
+}
+
+/* Modal (Popouts) */
 .modal {
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0;
@@ -217,48 +234,7 @@ button:active {
   list-style-type: circle;
 }
 
-.cloud:nth-child(1) { 
-  position: absolute;
-  top: 70%;
-  left: 15%; 
-  animation: float 8s ease-in-out infinite;
-}
-
-.cloud:nth-child(2) {
-  position: absolute;
-  top: 25%;
-  left: 70%; 
-  animation: float 7s ease-in-out infinite;
-}
-
-.cloud:nth-child(3) {
-  position: absolute;
-  top: 40%;
-  left: 30%; 
-  animation: float 6s ease-in-out infinite;
-}
-
-.star:nth-child(1) { 
-  position: absolute;
-  top: 75%;
-  left: 30%; 
-  animation: glimmer 5s infinite alternate;
-}
-
-.star:nth-child(2) {
-  position: absolute;
-  top: 40%;
-  left: 70%; 
-  animation: glimmer 5s infinite alternate;
-}
-
-.star:nth-child(3) {
-  position: absolute;
-  top: 15%;
-  left: 15%; 
-  animation: glimmer 5s infinite alternate;
-}
-
+/* Animations */
 @keyframes float {
   0%, 100% { 
     transform: translateY(0px); 
