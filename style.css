@@ -4,13 +4,32 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
   min-height: 100vh;
   margin: 0;
-  display: flex;          
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+#day-section,
+#night-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
@@ -30,7 +49,6 @@ button:active {
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  margin-left: 29px;
 }
 
 h1 {
@@ -39,7 +57,8 @@ h1 {
   text-align: center;
 }
 
-#sun-moon-description, #star-cloud-description {
+.sun-moon-description,
+.star-cloud-description {
   margin: 10px 0;
   text-align: center;
 }
@@ -48,35 +67,31 @@ h1 {
 #day {
   background: linear-gradient(
     to bottom,
-    rgb(56, 189, 248),   
+    rgb(56, 189, 248),
     rgb(147, 197, 253),
-    rgb(254, 243, 199)  
+    rgb(254, 243, 199)
   );
-  color: #000
+  color: #000;
 }
 
 #night {
   background: linear-gradient(
     to bottom,
-    rgb(30, 27, 75),    
-    rgb(88, 28, 135),  
-    rgb(49, 46, 129)    
+    rgb(30, 27, 75),
+    rgb(88, 28, 135),
+    rgb(49, 46, 129)
   );
-  color: #fff
-}
-
-#night-section {
-  display: none;
+  color: #fff;
 }
 
 /* Shapes (Sun, Moon, Clouds, Stars) */
 #sun {
-  background-color: #FFF57B;
+  background-color: #fff57b;
   transition: all 0.3s ease-in-out;
 }
 
 #moon {
-  background-color: #E2E8F0;
+  background-color: #e2e8f0;
   transition: all 0.3s ease-in-out;
 }
 
@@ -84,33 +99,41 @@ h1 {
   height: 100px;
   aspect-ratio: 1.8;
   --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
-  mask: var(--g) 100% 100%/30% 60%,var(--g) 70% 0/50% 100%,var(--g) 0 100%/36% 68%,var(--g) 27% 18%/26% 40%,linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
+  mask:
+    var(--g) 100% 100%/30% 60%,
+    var(--g) 70% 0/50% 100%,
+    var(--g) 0 100%/36% 68%,
+    var(--g) 27% 18%/26% 40%,
+    linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
   background: white;
 }
 
 .star-shape {
-  width: 100px;  
+  width: 100px;
   aspect-ratio: 1;
-  background: #F8CA00;
-  clip-path: polygon(50% 0,
-    calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
-    calc(50%*(1 - sin(.2turn))) calc(50%*(1 - cos(.2turn))),
-    calc(50%*(1 + sin(.2turn))) calc(50%*(1 - cos(.2turn))),
-    calc(50%*(1 - sin(.4turn))) calc(50%*(1 - cos(.4turn))) 
-   ); 
+  background: #f8ca00;
+  clip-path: polygon(
+    50% 0,
+    calc(50% * (1 + sin(0.4turn))) calc(50% * (1 - cos(0.4turn))),
+    calc(50% * (1 - sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+    calc(50% * (1 + sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+    calc(50% * (1 - sin(0.4turn))) calc(50% * (1 - cos(0.4turn)))
+  );
 }
 
-.cloud, .star {
-  display: inline-block;
-  position: relative;
+.cloud,
+.star {
   transition: all 0.3s ease-in-out;
 }
 
-.cloud:hover, .star:hover, .circle:hover {
+.cloud:hover,
+.star:hover,
+.circle:hover {
   scale: 1.1;
 }
 
-.cloud p, .star p {
+.cloud p,
+.star p {
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -127,50 +150,51 @@ h1 {
   left: 50%;
 }
 
-.cloud:hover p, .star:hover p {
+.cloud:hover p,
+.star:hover p {
   opacity: 1;
   visibility: visible;
 }
 
-.cloud:nth-child(1) { 
+#cloud-introduction {
   position: absolute;
   top: 70%;
-  left: 15%; 
+  left: 15%;
   animation: float 8s ease-in-out infinite;
 }
 
-.cloud:nth-child(2) {
+#cloud-random-facts {
   position: absolute;
   top: 25%;
-  left: 70%; 
+  left: 70%;
   animation: float 7s ease-in-out infinite;
 }
 
-.cloud:nth-child(3) {
+#cloud-courses-taken {
   position: absolute;
   top: 40%;
-  left: 30%; 
+  left: 30%;
   animation: float 6s ease-in-out infinite;
 }
 
-.star:nth-child(1) { 
+#star-badminton {
   position: absolute;
   top: 75%;
-  left: 30%; 
+  left: 30%;
   animation: glimmer 5s infinite alternate;
 }
 
-.star:nth-child(2) {
+#star-anime {
   position: absolute;
   top: 40%;
-  left: 70%; 
+  left: 70%;
   animation: glimmer 5s infinite alternate;
 }
 
-.star:nth-child(3) {
+#star-video-games {
   position: absolute;
   top: 15%;
-  left: 15%; 
+  left: 15%;
   animation: glimmer 5s infinite alternate;
 }
 
@@ -223,8 +247,9 @@ h1 {
   text-align: left;
 }
 
-.modal-content ul, .modal-content ol {
-  color:black;
+.modal-content ul,
+.modal-content ol {
+  color: black;
   padding: 0 20px;
   margin: 10px 0;
 }
@@ -236,21 +261,23 @@ h1 {
 
 /* Animations */
 @keyframes float {
-  0%, 100% { 
-    transform: translateY(0px); 
+  0%,
+  100% {
+    transform: translateY(0px);
   }
-  50% { 
-    transform: translateY(-20px); 
+  50% {
+    transform: translateY(-20px);
   }
 }
 
 @keyframes glimmer {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
-    filter: drop-shadow(0 0 5px #F8CA00);
+    filter: drop-shadow(0 0 5px #f8ca00);
   }
   50% {
     opacity: 0.4;
-    filter: drop-shadow(0 0 2px #F8CA00);
+    filter: drop-shadow(0 0 2px #f8ca00);
   }
 }

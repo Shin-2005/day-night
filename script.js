@@ -1,5 +1,11 @@
-const openModalBtns = document.querySelectorAll(".open-modal-btn");
+const daySection = document.getElementById("day-section");
+const nightSection = document.getElementById("night-section");
+const body = document.body;
 
+nightSection.style.display = "none";
+
+// Modal Btns
+const openModalBtns = document.querySelectorAll(".open-modal-btn");
 openModalBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     const targetId = "modal-" + btn.id;
@@ -15,22 +21,18 @@ closeModalBtns.forEach((btn) => {
   });
 });
 
+// Sun click
 const sunBtn = document.getElementById("sun");
 sunBtn.addEventListener("click", () => {
-  const daySection = document.getElementById("day-section");
-  const nightSection = document.getElementById("night-section");
-  const body = document.body;
   body.id = "night";
   daySection.style.display = "none";
-  nightSection.style.display = "block";
+  nightSection.style.display = "flex";
 });
 
+// Moon click
 const moonBtn = document.getElementById("moon");
 moonBtn.addEventListener("click", () => {
-  const daySection = document.getElementById("day-section");
-  const nightSection = document.getElementById("night-section");
-  const body = document.body;
   body.id = "day";
-  daySection.style.display = "block";
+  daySection.style.display = "flex";
   nightSection.style.display = "none";
 });

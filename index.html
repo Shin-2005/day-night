@@ -1,141 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shin's Day and Night Profile</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body id="day">
-  <main>
-    
-    <section id="day-section">
-      <button id="sun" class="circle"></button>
-      <h1 id="day-title">Day</h1>
-    <p id="sun-moon-description">
-      Click the sun to switch to night 🌙
-    </p>
-    <p id="star-cloud-description">
-      Click the clouds to learn more about me ☁️
-    </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shin's Day and Night Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="day">
+    <main>
+      <section id="day-section">
+        <button id="sun" class="circle"></button>
+        <h1 id="day-title">Day</h1>
+        <p class="sun-moon-description">Click the sun to switch to night 🌙</p>
+        <p class="star-cloud-description">
+          Click the clouds to learn more about me ☁️
+        </p>
 
-    <div class="clouds">
-      <div class="cloud">
-        <button class="cloud-shape open-modal-btn" id="introduction"></button>
-        <p>Introduction</p>
-      </div>
-      
-      <div class="cloud">
-        <button class="cloud-shape open-modal-btn" id="randomFacts"></button>
-        <p>Random Facts</p>
-      </div>
-      
-      <div class="cloud">
-        <button class="cloud-shape open-modal-btn" id="coursesTaken"></button>
-        <p>Courses Taken</p>
-      </div>
-
-      <div class="modal" id="modal-introduction">
-        <div class="modal-content">
-          <h2>Introduction</h2>
-          <p>
-            Hi! My name is Shin Ao but you can just call me Shin. I'm turning 21 this year and currently in my second year of comp sci.<br>
-          </p>
-          <p>
-            I was born in Singapore but moved to Sydney when I was four, so I spent most of my life here.<br>
-          </p>
-          <p>
-            I am keen to join DevSoc's Training Program because I'm keen to gain more experience in project work and meet new friends :&rpar;<br>
-          </p>
-          <button class="close-modal-btn">Close</button> 
+        <div class="cloud" id="cloud-introduction">
+          <button class="cloud-shape open-modal-btn" id="introduction"></button>
+          <p>Introduction</p>
         </div>
-      </div>
 
-      <div class="modal" id="modal-randomFacts">
-        <div class="modal-content">
-          <h2>Random Facts About Me</h2>
-          <ul>
-            <li>I have two siblings &lpar;one older brother and one younger sister&rpar;</li>
-            <li>My MBTI is INFP</li>
-            <li>I hate bitter melon</li>
-          </ul>
-          <img src="" alt="">
-          <button class="close-modal-btn">Close</button> 
+        <div class="cloud" id="cloud-random-facts">
+          <button class="cloud-shape open-modal-btn" id="random-facts"></button>
+          <p>Random Facts</p>
         </div>
-      </div>
 
-      <div class="modal" id="modal-coursesTaken">
-        <div class="modal-content">
-          <h2>Courses taken</h2>
-          <ul>
-            <li>Term 1: COMP1511 MATH1081 MATH1131<br></li>
-            <li>Term 2: COMP1521 COMP2521 MATH1231<br></li>
-            <li>Term 3: COMP1531 COMP3331 MATH3411<br></li>
-          </ul>
-          <button class="close-modal-btn">Close</button> 
+        <div class="cloud" id="cloud-courses-taken">
+          <button
+            class="cloud-shape open-modal-btn"
+            id="courses-taken"
+          ></button>
+          <p>Courses Taken</p>
         </div>
-      </div>
-      </div>
-    </section>
 
-    <section id="night-section">
-      <button class="circle" id="moon"></button>
-      <h1>Night</h1>
-      <p id="star-cloud-description">
-        Click the stars to learn more about me ⭐️
-      </p>
-      <p id="sun-moon-description">
-        Click the moon to switch to day ☀️
-      </p>
+        <div class="modal" id="modal-introduction">
+          <div class="modal-content">
+            <h2>Introduction</h2>
+            <p>
+              Hi! My name is Shin Ao but you can just call me Shin. I'm 21 this
+              year and currently in my second year of comp sci.<br />
+            </p>
+            <p>
+              I was born in Singapore but moved to Sydney when I was four, so I
+              spent most of my life here.<br />
+            </p>
+            <p>
+              I am keen to join DevSoc's Training Program because I'm keen to
+              gain more experience in project work and meet new friends
+              :&rpar;<br />
+            </p>
+            <button class="close-modal-btn">Close</button>
+          </div>
+        </div>
 
-      <div class="stars">
-        <div class="star">
+        <div class="modal" id="modal-random-facts">
+          <div class="modal-content">
+            <h2>Random Facts About Me</h2>
+            <ul>
+              <li>
+                I have two siblings &lpar;one older brother and one younger
+                sister&rpar;
+              </li>
+              <li>My MBTI is INFP</li>
+              <li>I hate bitter melon</li>
+            </ul>
+            <img src="" alt="" />
+            <button class="close-modal-btn">Close</button>
+          </div>
+        </div>
+
+        <div class="modal" id="modal-courses-taken">
+          <div class="modal-content">
+            <h2>Courses taken</h2>
+            <ul>
+              <li>COMP1511 MATH1081 MATH1131<br /></li>
+              <li>COMP1521 COMP2521 MATH1231<br /></li>
+              <li>COMP1531 COMP3331 MATH3411<br /></li>
+              <li>COMP2041 COMP2511</li>
+            </ul>
+            <button class="close-modal-btn">Close</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="night-section">
+        <button class="circle" id="moon"></button>
+        <h1>Night</h1>
+        <p class="star-cloud-description">
+          Click the stars to learn more about me ⭐️
+        </p>
+        <p class="sun-moon-description">Click the moon to switch to day ☀️</p>
+
+        <div class="star" id="star-badminton">
           <button class="star-shape open-modal-btn" id="badminton"></button>
           <p>Badminton</p>
         </div>
-        <div class="star">
+
+        <div class="star" id="star-anime">
           <button class="star-shape open-modal-btn" id="anime"></button>
           <p>Anime</p>
         </div>
-        <div class="star">
-          <button class="star-shape open-modal-btn" id="videoGames"></button>
+
+        <div class="star" id="star-video-games">
+          <button class="star-shape open-modal-btn" id="video-games"></button>
           <p>Video Games</p>
         </div>
 
         <div class="modal" id="modal-badminton">
           <div class="modal-content">
             <h2>Badminton</h2>
-            <p>I've been playing Badminton since 2019, I usually play at my local club every Saturday.<br></p>
-            <p>My favourite player currently is Lee Zii Jia, mainly because of his signature backhand smash with a full pirouette.</p>
-            <button class="close-modal-btn">Close</button> 
+            <p>
+              I've been playing Badminton since 2019, I usually play at my local
+              club every Saturday.<br />
+            </p>
+            <p>
+              My favourite player currently is Lee Zii Jia, mainly because of
+              his signature backhand smash with a full pirouette.
+            </p>
+            <button class="close-modal-btn">Close</button>
           </div>
         </div>
 
         <div class="modal" id="modal-anime">
           <div class="modal-content">
             <h2>Anime</h2>
-            <p>My Top Three Anime:<br></p>
+            <p>My Top Three Anime:<br /></p>
             <ol>
               <li>Chainsaw Man</li>
               <li>Spy x Family</li>
               <li>Hell's Paradise</li>
             </ol>
-          <p>I have been recommended Frieren and Apothecary Diaries, but I haven't started them yet.</p>
-            <button class="close-modal-btn">Close</button> 
+            <p>
+              I have been recommended Frieren and Apothecary Diaries, but I
+              haven't started them yet.
+            </p>
+            <button class="close-modal-btn">Close</button>
           </div>
         </div>
 
-        <div class="modal" id="modal-videoGames">
+        <div class="modal" id="modal-video-games">
           <div class="modal-content">
             <h2>Video Games</h2>
-            <p>I used to spend a lot of time playing league as a jungle main (hecarim, warwick, nunu). Nowadays, I prefer playing TFT.</p>
-            <button class="close-modal-btn">Close</button> 
+            <p>
+              I used to spend a lot of time playing league as a jungle main
+              (hecarim, warwick, nunu). Nowadays, I prefer playing TFT.
+            </p>
+            <button class="close-modal-btn">Close</button>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
